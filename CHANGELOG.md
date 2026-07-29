@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Security
 
-- Resolved all 30 open Dependabot alerts (1 critical, 10 high, 17 moderate, 2 low) — `npm audit` now reports 0 vulnerabilities
+- Resolved all 83 open Dependabot alerts (7 critical, 23 high, 49 moderate, 4 low) — every alert on the repository now reports `fixed`, and `npm audit` reports 0 vulnerabilities
 - Runtime dependency floors raised so downstream consumers resolve patched versions, not just this repo's lockfile: `axios` `^1.11.0` → `^1.18.1` (28 advisories including proxy credential leaks, SSRF via NO_PROXY bypass, and prototype-pollution MitM), `@modelcontextprotocol/sdk` `^1.17.0` → `^1.30.0` (pulls patched `hono`, `express`/`body-parser`, `qs`, `ajv`/`fast-uri`, `express-rate-limit`/`ip-address`), `fast-xml-parser` → `^5.10.1`
 - Dev tooling upgraded: `vitest` `^2.0.0` → `^4.1.10` (critical: arbitrary file read/execute via the Vitest UI server), `nx` `^21.4.0` → `^23.1.0`, `tsx` → `^4.23.1`
 - Added npm `overrides` for `axios` and `brace-expansion`, which `nx` pins to exact vulnerable versions. These are dev-tooling only — no published package depends on an override to be non-vulnerable
